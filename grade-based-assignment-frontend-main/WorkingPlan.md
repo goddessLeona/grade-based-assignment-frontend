@@ -121,5 +121,6 @@ startpage.
 * added harts to the search page but if you pushed the hart you got to detalj-page, did not get it to work so good and the links to detail pages also got bad. So I removed it again.
 
 Result, Not as good as the original before I started working on favorits, but still working.
+remove all console.log and emty favorits from localstorage.
 
 Will now upload this to github and continue to work on trying to solve this on free time, would be nice to have it working.

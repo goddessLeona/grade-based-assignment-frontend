@@ -212,9 +212,7 @@ export async function search() {
 // detal-sida from search sidan
 
 export async function handelsearch(id) {
-  console.log(id);
-
-
+  
   const lookUp = await fetch(
     `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
   );
@@ -222,7 +220,6 @@ export async function handelsearch(id) {
 
   const info = infoDrink.drinks[0];
   const drinkdata = mapRawCocktailData(info);
-  console.log(drinkdata)
 
   const name = drinkdata.name;
   const img = drinkdata.thumbnail;
@@ -308,11 +305,9 @@ export function savefav() {
 // add favorits from detajpage from start
 
 export async function handelHart(id){
-  console.log(id);
-
+  
   const hart = document.getElementById(id);
-  console.log(hart);
-
+  
   const hasAHart = favorites.some((item) => item.id === id);
 
   if(hasAHart){
@@ -332,9 +327,6 @@ export async function handelHart(id){
 
     const name = drinkdata.name;
     const idDrink = drinkdata.id;
-
-    console.log(name);
-    console.log(idDrink);
 
     const favoriteObject = {
       name: name,
